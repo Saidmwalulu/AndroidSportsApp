@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SportCityApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="about0">Sport city online application symbolizes the community capacity to leverage technology for solving local challenges and embracing digital transformation.</string>
+    <string name="about1">Our goal  is to have a centralized football hub, talent showcase, technology adoption and youth engagement.</string>
+    <string name="about2">The application is poised to revolutionize how the community engages with football related content, offering a dedicated platform for tournament information, fixtures, and video highlights which will contribute to promote talent, embrace technology, and nurturing a sense of community involvement.</string>
+</resources>

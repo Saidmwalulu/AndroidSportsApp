@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddPostActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title=""
+        android:elevation="1dp" >
+
+        <ImageButton
+            android:id="@+id/backPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goBack"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Posts"
+            android:fontFamily="@font/motion"
+            android:textSize="33sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="35dp"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/postImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@color/cool_grey" />
+
+            <TextView
+                android:id="@+id/txtPickImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select image"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:onClick="selectPhoto"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/textDescAddPost"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:gravity="start"
+                android:hint="post description....."
+                android:textSize="17sp"
+                android:background="@drawable/stroke_shape" />
+
+            <Button
+                android:id="@+id/btnAddPost"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Post"
+                style="@style/Theme.AppCompat"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:paddingStart="29dp"
+                android:paddingEnd="29dp"
+                android:textColor="@color/white"
+                android:background="@drawable/round_button" />
+
+            <VideoView
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:layout_marginTop="8dp"
+                android:background="#cccccc" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnAddVideos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    style="@style/Theme.AppCompat"
+                    android:text="Add Videos"
+                    android:layout_marginTop="20dp"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="20dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_button" />
+
+                <Button
+                    android:id="@+id/btnAddFixtures"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Add Fixtures"
+                    style="@style/Theme.AppCompat"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_button" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

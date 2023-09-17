@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title=""
+        android:elevation="1dp" >
+
+        <ImageButton
+            android:id="@+id/backPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goBack"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comments"
+            android:fontFamily="@font/motion"
+            android:textSize="33sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="35dp"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shimmer_comment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_comment" />
+
+            <include
+                layout="@layout/shimmer_comment" />
+
+            <include
+                layout="@layout/shimmer_comment" />
+
+            <include
+                layout="@layout/shimmer_comment" />
+
+            <include
+                layout="@layout/shimmer_comment" />
+
+            <include
+                layout="@layout/shimmer_comment" />
+            <include
+                layout="@layout/shimmer_comment" />
+            <include
+                layout="@layout/shimmer_comment" />
+            <include
+                layout="@layout/shimmer_comment" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+
+        <EditText
+            android:id="@+id/editTextComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="4dp"
+            android:hint="write your comment here..."
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/btnAddComment"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Add"
+            android:onClick="addComment"
+            style="@style/Theme.AppCompat"
+            android:textAllCaps="false"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:background="@drawable/round_button"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

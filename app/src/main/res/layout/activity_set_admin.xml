@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SetAdminActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title=""
+        android:elevation="1dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/backPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goBack"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow_back"
+                android:background="@android:color/transparent"
+                />
+
+            <TextView
+                android:id="@+id/usersCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="#00008B"
+                android:layout_marginStart="35dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Users"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shimmer_all_users">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/shimmer_all_users" />
+
+            <include
+                layout="@layout/shimmer_all_users" />
+
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+            <include
+                layout="@layout/shimmer_all_users" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_set_admins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_set_admins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
